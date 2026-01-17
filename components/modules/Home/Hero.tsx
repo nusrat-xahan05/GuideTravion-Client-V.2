@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { HeroProps } from "@/types/heroProps";
-import bgImage from "../../../assets/images/banner2.jpg"
+import bgImage from "../../../assets/images/Banner.png"
 import bdImage from "../../../assets/images/bd-map.png"
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +15,8 @@ const defaultProps: HeroProps = {
     badge: { text: "Explore Bangladesh" },
     heading: {
         line1: "Discover Your Next",
-        line2: "Adventure with GuideTravion",
+        line2: "Adventure with ",
+        line3: "GuideTravion",
     },
     description: {
         text: "Connect with trusted guides and explore authentic destinations. Book tours, get local insights, and enjoy personalized travel."
@@ -35,7 +36,7 @@ export default function Hero(props: HeroProps = defaultProps) {
     } = { ...defaultProps, ...props };
 
     return (
-        <section className="relative w-full h-screen flex items-center justify-center">
+        <section className="relative w-full pt-32 pb-24 flex items-center justify-center">
             {/* -------- BACKGROUND IMAGE -------- */}
             <div className="absolute inset-0 bg-cover bg-center">
                 <Image
@@ -46,7 +47,7 @@ export default function Hero(props: HeroProps = defaultProps) {
                     priority
                 />
                 {/* --- BACKGROUND OVERLAY --- */}
-                <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/55 to-black/80" />
+                <div className="absolute inset-0 bg-linear-to-b from-[rgba(226,221,221,0.6)] via-black/45 to-[rgba(0,0,0,0.8)]" />
             </div>
 
             {/* Content */}
@@ -55,9 +56,9 @@ export default function Hero(props: HeroProps = defaultProps) {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mb-6 inline-flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full"
+                    className="mb-6 inline-flex items-center gap-2 bg-[rgba(136,238,2,0.6)] px-4 py-2 rounded-full"
                 >
-                    <span className="text-xs font-medium text-blue-800 flex items-center gap-1.5">{badge?.text}
+                    <span className="text-xs font-body font-semibold text-[rgba(0,43,17,0.85)] flex items-center gap-1.5">{badge?.text}
                         <Image
                             src={bdImage}
                             alt="Banner"
@@ -72,12 +73,14 @@ export default function Hero(props: HeroProps = defaultProps) {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-white text-4xl md:text-6xl font-bold leading-tight"
+                    className="font-paytone text-white text-5xl md:text-6xl leading-tight"
                 >
                     {heading?.line1}
                     <br />
                     {heading?.line2}
+                    <span>{heading?.line3}</span>
                 </motion.h1>
+
 
                 {/* Description */}
                 <motion.div
@@ -98,7 +101,7 @@ export default function Hero(props: HeroProps = defaultProps) {
                 >
                     {buttons?.primary && (
                         <Link href={'/tour'}>
-                            <Button className="px-8 py-6 text-[17px] font-semibold text-white transition bg-blue-800 hover:bg-blue-800 border border-blue-800 cursor-pointer">
+                            <Button className="px-8 py-6 text-[17px] font-semibold text-primary hover:text-secondary transition duration-300 bg-secondary hover:bg-primary border border-secondary hover:border-primary cursor-pointer">
                                 {buttons.primary.text}
                             </Button>
                         </Link>

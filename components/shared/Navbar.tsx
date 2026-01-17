@@ -5,13 +5,16 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { getUserRole } from "@/services/auth/getUserRole";
 import { getDefaultDashboardRoute } from "@/lib/navbar-auth-routes";
 import LogoutButton from "./Auth/LogoutButton";
+import Logo from "@/assets/icons/Logo";
 
 
 const Navbar = async () => {
     const navItems = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
-        { href: "/tour", label: "Tours" }
+        { href: "/tour", label: "Explore Tours" },
+        { href: "/#", label: "Contact" },
+        { href: "/#", label: "Blog" },
     ];
 
     const userRole = await getUserRole();
@@ -19,21 +22,21 @@ const Navbar = async () => {
 
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
-            <div className="mx-auto max-w-[1250px] h-[60px] flex items-center justify-between px-6">
+        <header className="w-full">
+            <div className="mx-auto max-w-[1250px] py-4 flex items-center justify-between px-6">
 
                 {/* Left: Logo */}
-                <Link href="/" className="text-[22px] font-bold text-blue-600">
-                    GuideTravion
+                <Link href="/">
+                    <Logo></Logo>
                 </Link>
 
                 {/* Middle Nav */}
-                <nav className="hidden md:flex items-center space-x-8">
+                <nav className="hidden md:flex items-center space-x-8 bg-[rgba(255,255,255,0.6)] shadow-md px-5 rounded-[80]">
                     {navItems.map((item) => (
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="text-[15px] text-gray-700 font-medium hover:text-blue-600 transition-all duration-300 ease-out">
+                            className="px-3.5 py-[11.5] mx-1.5 font-body font-medium tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] hover:text-secondary transition-all duration-300 ease-out">
                             {item.label}
                         </Link>
                     ))}
@@ -41,7 +44,7 @@ const Navbar = async () => {
                     {userRole && (
                         <Link
                             href={dashboardLink}
-                            className="text-[15px] text-gray-700 font-medium hover:text-blue-600 transition-all duration-300 ease-out">
+                            className="px-3.5 py-[11.5] mx-1.5 font-body font-medium tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] hover:text-secondary transition-all duration-300 ease-out">
                             Dashboard
                         </Link>
                     )}
@@ -51,16 +54,19 @@ const Navbar = async () => {
                 <div className="hidden md:flex items-center space-x-3">
                     {!userRole ? (
                         <>
+                            <Link href="/login">
+                                <Button 
+                                    variant="outline"
+                                    className="transition duration-300 rounded-[80] px-7 py-[21.5] bg-transparent hover:bg-white/20 border-0 hover:border hover:border-white font-body font-semibold tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] cursor-pointer">
+                                    Login
+                                </Button>
+                            </Link>
+
                             <Link href="/register/tourist">
                                 <Button
                                     variant="outline"
-                                    className="rounded-xl px-7 text-[14px] border-blue-700 text-blue-600 hover:bg-blue-50 cursor-pointer">
-                                    Register
-                                </Button>
-                            </Link>
-                            <Link href="/login">
-                                <Button className="rounded-xl px-7 text-[14px] bg-blue-700 hover:bg-blue-700 cursor-pointer">
-                                    Login
+                                    className="transition duration-300 rounded-[80] px-7 py-[21.5] bg-secondary shadow-md hover:bg-primary font-body font-semibold tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] hover:text-secondary border-none cursor-pointer">
+                                    Sign Up
                                 </Button>
                             </Link>
                         </>

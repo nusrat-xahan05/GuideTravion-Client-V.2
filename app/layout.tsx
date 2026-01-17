@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Paytone_One } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Suspense } from "react";
@@ -7,14 +7,15 @@ import LoginSuccessToast from "@/components/shared/Auth/LoginSuccessToast";
 import LogoutSuccessToast from "@/components/shared/Auth/LogoutSuccessToast";
 import NextTopLoader from "nextjs-toploader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const paytoneOne = Paytone_One({
   subsets: ["latin"],
+  variable: "--font-paytone-one",
+  weight: "400", // Paytone One has only 400
 });
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${paytoneOne.variable} antialiased`}
       >
         <NextTopLoader
           color="#2563eb"

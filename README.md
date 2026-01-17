@@ -1,4 +1,4 @@
-# GuideTravion – Frontend
+# GuideTravion V.2 – Frontend
 
 ## Project Overview
 GuideTravion is a role-based tour booking platform frontend where tourists can explore tours, book guides, make secure payments, and leave reviews after completing tours. The system is designed to work seamlessly with the GuideTravion Backend API.
