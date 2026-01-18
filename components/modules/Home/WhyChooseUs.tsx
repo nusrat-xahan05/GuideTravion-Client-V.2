@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function WhyChooseUs() {
     return (
         <section className="bg-gray-50 mt-16 mb-8">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-8xl mx-auto py-16 px-4 md:px-8 lg:px-16">
                 <h2 className="text-3xl font-bold text-center mb-12">
                     Why Choose GuideTravion
                 </h2>

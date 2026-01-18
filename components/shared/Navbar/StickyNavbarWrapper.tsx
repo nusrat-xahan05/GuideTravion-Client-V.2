@@ -25,7 +25,7 @@ export default function StickyNavbarWrapper({
             className={clsx(
                 "fixed top-0 left-0 w-full z-50 transition-all duration-300",
                 scrolled
-                    ? "bg-[rgba(255,255,255,0.6)] shadow-md backdrop-blur"
+                    ? "bg-[rgba(255,255,255,0.8)] shadow-md backdrop-blur"
                     : "bg-transparent"
             )}
         >

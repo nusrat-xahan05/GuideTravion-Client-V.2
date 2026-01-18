@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { getUserRole } from "@/services/auth/getUserRole";
 import { getDefaultDashboardRoute } from "@/lib/navbar-auth-routes";
-import LogoutButton from "./Auth/LogoutButton";
+import LogoutButton from "../Auth/LogoutButton";
 import Logo from "@/assets/icons/Logo";
 
 
@@ -22,8 +22,8 @@ const Navbar = async () => {
 
 
     return (
-        <header className="w-full">
-            <div className="mx-auto max-w-[1250px] py-4 flex items-center justify-between px-6">
+        <div className="w-full">
+            <div className="max-w-8xl mx-auto px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
 
                 {/* Left: Logo */}
                 <Link href="/">
@@ -31,7 +31,7 @@ const Navbar = async () => {
                 </Link>
 
                 {/* Middle Nav */}
-                <nav className="hidden md:flex items-center space-x-8 bg-[rgba(255,255,255,0.6)] shadow-md px-5 rounded-[80]">
+                <nav className="hidden lg:flex items-center space-x-8 bg-[rgba(255,255,255,0.6)] shadow-md px-5 rounded-[80]">
                     {navItems.map((item) => (
                         <Link
                             key={item.label}
@@ -51,11 +51,11 @@ const Navbar = async () => {
                 </nav>
 
                 {/* Right: Auth Buttons */}
-                <div className="hidden md:flex items-center space-x-3">
+                <div className="hidden lg:flex items-center space-x-3">
                     {!userRole ? (
                         <>
                             <Link href="/login">
-                                <Button 
+                                <Button
                                     variant="outline"
                                     className="transition duration-300 rounded-[80] px-7 py-[21.5] bg-transparent hover:bg-white/20 border-0 hover:border hover:border-white font-body font-semibold tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] cursor-pointer">
                                     Login
@@ -76,11 +76,11 @@ const Navbar = async () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="outline" className="rounded-lg border-gray-300 cursor-pointer">
-                                <Menu />
+                            <Button variant="outline" className="bg-primary rounded-lg border-gray-300 cursor-pointer">
+                                <Menu className="text-white" />
                             </Button>
                         </SheetTrigger>
 
@@ -92,8 +92,7 @@ const Navbar = async () => {
                                     <Link
                                         key={item.label}
                                         href={item.href}
-                                        className="text-[17px] font-medium hover:text-blue-600 transition duration-300"
-                                    >
+                                        className="font-body font-medium tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] hover:text-secondary transition-all duration-300 ease-out">
                                         {item.label}
                                     </Link>
                                 ))}
@@ -101,8 +100,7 @@ const Navbar = async () => {
                                 {userRole && (
                                     <Link
                                         href={dashboardLink}
-                                        className="text-[17px] font-medium hover:text-blue-600 transition duration-300"
-                                    >
+                                        className="font-body font-medium tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] hover:text-secondary transition-all duration-300 ease-out">
                                         Dashboard
                                     </Link>
                                 )}
@@ -110,17 +108,18 @@ const Navbar = async () => {
                                 <div className="border-t pt-5 flex flex-col space-y-4">
                                     {!userRole ? (
                                         <>
-                                            <Link href="/register">
+                                            <Link href="/register/tourist">
                                                 <Button
                                                     variant="outline"
-                                                    className="w-full rounded-xl border-blue-600 text-blue-600 hover:bg-blue-50 cursor-pointer"
-                                                >
-                                                    Register
+                                                    className="w-full transition duration-300 rounded-[80] px-7 py-[21.5] bg-secondary shadow-md hover:bg-primary font-body font-semibold tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] hover:text-secondary border-none cursor-pointer">
+                                                    Sign Up
                                                 </Button>
                                             </Link>
 
                                             <Link href="/login">
-                                                <Button className="w-full rounded-xl bg-blue-600 hover:bg-blue-700 cursor-pointer">
+                                                <Button
+                                                    variant="outline"
+                                                    className="w-full transition duration-300 rounded-[80] px-7 py-[21.5] bg-transparent hover:bg-white/20 border hover:border-white font-body font-semibold tracking-wide text-[14.5px] text-[rgba(0,43,17,.9)] cursor-pointer">
                                                     Login
                                                 </Button>
                                             </Link>
@@ -134,7 +133,7 @@ const Navbar = async () => {
                     </Sheet>
                 </div>
             </div>
-        </header>
+        </div>
     );
 };
 

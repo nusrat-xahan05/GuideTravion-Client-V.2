@@ -1,6 +1,6 @@
 import Footer from "@/components/shared/Footer";
-import Navbar from "@/components/shared/Navbar";
-import StickyNavbarWrapper from "@/components/shared/StickyNavbarWrapper";
+import Navbar from "@/components/shared/Navbar/Navbar";
+import StickyNavbarWrapper from "@/components/shared/Navbar/StickyNavbarWrapper";
 export const dynamic = "force-dynamic";
 
 const CommonLayout = ({ children }: { children: React.ReactNode }) => {
@@ -9,7 +9,7 @@ const CommonLayout = ({ children }: { children: React.ReactNode }) => {
             <StickyNavbarWrapper>
                 <Navbar></Navbar>
             </StickyNavbarWrapper>
-
+            
             {children}
 
             <Footer />

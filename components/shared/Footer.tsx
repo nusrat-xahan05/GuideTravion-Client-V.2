@@ -60,7 +60,7 @@
 export default function Footer() {
     return (
         <footer className="bg-[#07102A] text-white">
-            <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="max-w-8xl mx-auto py-16 px-4 md:px-8 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-10">
                 {/* Brand */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold text-white tracking-wide">GuideTravion</h2>
