@@ -8,6 +8,7 @@ import WhyChooseUs from '@/components/modules/Home/WhyChooseUs';
 import { getDiviosnStats, getNewTours, getTopTours } from '@/services/user/tour.services';
 import { getMyWishlist } from '@/services/user/wishlist.service';
 import { getUserRole } from '@/services/auth/getUserRole';
+import DealsOffer from '@/components/modules/Home/DealsOffer';
 
 
 const HomePage = async () => {
@@ -32,6 +33,7 @@ const HomePage = async () => {
             <CTASection></CTASection>
             <RecentlyAddedTours newTours={newTours.data} wishlistIds={wishlistIds} user={user}></RecentlyAddedTours>
             <DivisionSection divisionCounts={divisionCounts} />
+            <DealsOffer></DealsOffer>
         </div>
     );
 };
