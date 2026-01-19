@@ -1,6 +1,5 @@
 "use client";
 
-import SectionTitle from "@/components/shared/Home/SectionTitle";
 import { DIVISIONS } from "@/types/division.constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,13 +22,7 @@ export default function DivisionSection({ divisionCounts }: Props) {
     };
 
     return (
-        <section className="py-12 mb-8">
-            <SectionTitle
-                title="Explore Tours by Division"
-                subtitle="Explore the tour based on your preffered division"
-            />
-
-
+        <section className="my-20">
             {/* 2 rows → 4 cards per row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {DIVISIONS.map((division, index) => {
@@ -42,7 +35,7 @@ export default function DivisionSection({ divisionCounts }: Props) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.05 }}
-                            whileHover={{ scale: 1.03 }}
+                            whileHover={{ scale: 1.1, zIndex: 1 }}
                             className="cursor-pointer"
                             onClick={() => handleClick(division.value)}
                         >
@@ -56,7 +49,7 @@ export default function DivisionSection({ divisionCounts }: Props) {
                                 />
 
                                 {/* Black gradient overlay */}
-                                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-linear-to-t from-[rgba(0,43,17,0.8)] via-black/40 to-transparent" />
 
                                 {/* Text */}
                                 <div className="absolute bottom-4 left-4 text-white">

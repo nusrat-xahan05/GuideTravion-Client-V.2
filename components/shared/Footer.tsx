@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="">
-            <div className="max-w-8xl mx-auto px-4 md:px-8 lg:px-16 py-16 bg-[rgba(136,238,2,0.1)] text-white grid grid-cols-1 lg:grid-cols-2 gap-14">
+            <div className="max-w-8xl mx-auto px-4 md:px-8 lg:px-16 py-[70px] bg-[rgba(136,238,2,0.1)] text-white grid grid-cols-1 lg:grid-cols-2 gap-14">
                 {/* Brand */}
                 <div className="space-y-4 lg:mx-0 mx-auto">
                     <Logo></Logo>

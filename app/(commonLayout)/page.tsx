@@ -30,8 +30,8 @@ const HomePage = async () => {
             <WhyChooseUs></WhyChooseUs>
             <TopToursSection topTours={topTours} wishlistIds={wishlistIds} user={user} />
             <RecentlyAddedTours newTours={newTours.data} wishlistIds={wishlistIds} user={user}></RecentlyAddedTours>
-            <DivisionSection divisionCounts={divisionCounts} />
             <DealsOffer></DealsOffer>
+            <DivisionSection divisionCounts={divisionCounts} />
         </div>
     );
 };
