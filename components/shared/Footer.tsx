@@ -1,107 +1,73 @@
-// "use client";
-
-// import { MapPin, Mail, Phone } from "lucide-react";
-
-// export default function Footer() {
-//     return (
-//         <footer className="bg-slate-900 text-slate-300">
-//             <div className="max-w-7xl mx-auto px-6 py-14">
-//                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-
-//                     {/* LEFT: PROJECT NAME */}
-//                     <div className="space-y-3">
-//                         <h2 className="text-2xl font-bold text-white">GuideTravion</h2>
-//                         <p className="text-sm leading-relaxed text-slate-400">
-//                             A trusted travel platform connecting tourists with verified local
-//                             guides for safe, meaningful, and unforgettable journeys.
-//                         </p>
-//                     </div>
-
-//                     {/* MIDDLE: INFO */}
-//                     <div className="space-y-3">
-//                         <h3 className="text-lg font-semibold text-white">Contact Info</h3>
-//                         <div className="flex items-center gap-2 text-sm">
-//                             <MapPin className="w-4 h-4" />
-//                             <span>Bangladesh</span>
-//                         </div>
-//                         <div className="flex items-center gap-2 text-sm">
-//                             <Mail className="w-4 h-4" />
-//                             <span>support@guidetravion.com</span>
-//                         </div>
-//                         <div className="flex items-center gap-2 text-sm">
-//                             <Phone className="w-4 h-4" />
-//                             <span>+880 1800 000 000</span>
-//                         </div>
-//                     </div>
-
-//                     {/* RIGHT: COPYRIGHT */}
-//                     <div className="space-y-3 md:text-right">
-//                         <h3 className="text-lg font-semibold text-white">Legal</h3>
-//                         <p className="text-sm text-slate-400">
-//                             © {new Date().getFullYear()} GuideTravion. All rights reserved.
-//                         </p>
-//                         <p className="text-xs text-slate-500">
-//                             Built with care for travelers and guides.
-//                         </p>
-//                     </div>
-
-//                 </div>
-//             </div>
-
-//             {/* BOTTOM BAR */}
-//             <div className="border-t border-slate-800 py-4 text-center text-xs text-slate-500">
-//                 Empowering local guides • Enriching travel experiences
-//             </div>
-//         </footer>
-//     );
-// }
+import Facebook from "@/assets/icons/Facebook";
+import Instagram from "@/assets/icons/Instagram";
+import Linkedin from "@/assets/icons/Linkedin";
+import Logo from "@/assets/icons/Logo";
+import Twitter from "@/assets/icons/Twitter";
+import Link from "next/link";
 
 
 export default function Footer() {
     return (
-        <footer className="bg-[#07102A] text-white">
-            <div className="max-w-8xl mx-auto py-16 px-4 md:px-8 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <footer className="">
+            <div className="max-w-8xl mx-auto px-4 md:px-8 lg:px-16 py-16 bg-[rgba(136,238,2,0.1)] text-white grid grid-cols-1 lg:grid-cols-2 gap-14">
                 {/* Brand */}
-                <div className="space-y-4">
-                    <h2 className="text-2xl font-bold text-white tracking-wide">GuideTravion</h2>
-                    <p className="text-sm leading-relaxed text-gray-400">
+                <div className="space-y-4 lg:mx-0 mx-auto">
+                    <Logo></Logo>
+                    <p className="text-base leading-relaxed text-[rgba(0,43,17,0.7)] max-w-md">
                         GuideTravion is a modern travel companion platform that connects tourists
                         with verified local guides, curated tours, and authentic travel experiences
                         across Bangladesh.
                     </p>
+
+                    {/* Social Icons */}
+                    <div className="flex flex-wrap gap-1.5">
+                        <Link href='#' className="bg-[rgba(136,238,2,0.15)] hover:bg-[rgba(0,43,17,0.9)] text-[rgba(0,43,17,0.8)] hover:text-white transition duration-300 inline-block p-2.5 rounded-lg"><Facebook></Facebook></Link>
+                        <Link href='#' className="bg-[rgba(136,238,2,0.15)] hover:bg-[rgba(0,43,17,0.9)] text-[rgba(0,43,17,0.8)] hover:text-white transition duration-300 inline-block p-2.5 rounded-lg"><Instagram /></Link>
+                        <Link href='#' className="bg-[rgba(136,238,2,0.15)] hover:bg-[rgba(0,43,17,0.9)] text-[rgba(0,43,17,0.8)] hover:text-white transition duration-300 inline-block p-2.5 rounded-lg"><Twitter></Twitter></Link>
+                        <Link href='#' className="bg-[rgba(136,238,2,0.15)] hover:bg-[rgba(0,43,17,0.9)] text-[rgba(0,43,17,0.8)] hover:text-white transition duration-300 inline-block p-2.5 rounded-lg"><Linkedin></Linkedin></Link>
+                    </div>
                 </div>
 
-                {/* Platform Info */}
-                <div className="space-y-3">
-                    <h3 className="text-lg font-semibold text-white">Platform</h3>
-                    <ul className="space-y-2 text-sm text-gray-400">
-                        <li>Verified Local Guides</li>
-                        <li>Admin-Approved Tours</li>
-                        <li>Secure Booking System</li>
-                        <li>Role-Based Dashboards</li>
-                        <li>Real-Time Tour Management</li>
-                    </ul>
-                </div>
+                {/* FOOTER MENU ITEMS */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:justify-items-end justify-items-center">
+                    {/* For Travelers */}
+                    <div className="space-y-3">
+                        <h3 className="text-base font-semibold text-primary">For Travelers</h3>
+                        <ul className="space-y-2 font-medium text-[14.5px] text-[rgba(0,43,17,0.7)]">
+                            <li><Link href={'/tours'}>Explore Tours</Link></li>
+                            <li><Link href={'/blogs'}>Top Destinations</Link></li>
+                            <li><Link href={'/faq'}>Recently Added</Link></li>
+                            <li><Link href={'/faq'}>Reviews</Link></li>
+                        </ul>
+                    </div>
 
-                {/* Contact & Trust */}
-                <div className="space-y-3">
-                    <h3 className="text-lg font-semibold text-white">Trust & Safety</h3>
-                    <ul className="space-y-2 text-sm text-gray-400">
-                        <li>Admin Verified Guides</li>
-                        <li>Tour Approval Workflow</li>
-                        <li>Transparent Pricing</li>
-                        <li>User Reviews & Ratings</li>
-                        <li>Data Privacy Protection</li>
-                    </ul>
+                    {/* Company */}
+                    <div className="space-y-3">
+                        <h3 className="text-base font-semibold text-primary">Company</h3>
+                        <ul className="space-y-2 font-medium text-[14.5px] text-[rgba(0,43,17,0.7)]">
+                            <li><Link href={'/about'}>About Us</Link></li>
+                            <li><Link href={'/blogs'}>Why GuideTravion</Link></li>
+                            <li><Link href={'/faq'}>Privacy Policy</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Services */}
+                    <div className="space-y-3">
+                        <h3 className="text-base font-semibold text-primary">Services</h3>
+                        <ul className="space-y-2 font-medium text-[14.5px] text-[rgba(0,43,17,0.7)]">
+                            <li><Link href={'/register/guide'}>Become A Guide</Link></li>
+                            <li><Link href={'/contact'}>Contact us</Link></li>
+                            <li><Link href={'/faq'}>FAQ</Link></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            {/* Divider */}
-            <div className="border-t border-white/10 mt-10" />
-
             {/* Copyright */}
-            <div className="py-6 text-center text-sm text-gray-200">
-                © {new Date().getFullYear()} GuideTravion. All rights reserved.
+            <div className="bg-primary py-5 font-normal text-center text-sm text-white">
+                Copyright © {new Date().getFullYear()}
+                <span className="font-medium text-secondary"> GuideTravion</span>.
+                All rights reserved.
             </div>
         </footer>
     );

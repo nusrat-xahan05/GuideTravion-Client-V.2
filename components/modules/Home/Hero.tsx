@@ -36,7 +36,7 @@ export default function Hero(props: HeroProps = defaultProps) {
     } = { ...defaultProps, ...props };
 
     return (
-        <section className="relative w-full pt-32 pb-24 flex items-center justify-center">
+        <section className="relative w-full min-h-screen pt-32 pb-24 flex items-center justify-center">
             {/* -------- BACKGROUND IMAGE -------- */}
             <div className="absolute inset-0 bg-cover bg-center">
                 <Image
