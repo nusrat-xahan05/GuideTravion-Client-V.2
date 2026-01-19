@@ -22,7 +22,7 @@ export default function DivisionSection({ divisionCounts }: Props) {
     };
 
     return (
-        <section className="my-20">
+        <section className="mb-20">
             {/* 2 rows → 4 cards per row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {DIVISIONS.map((division, index) => {

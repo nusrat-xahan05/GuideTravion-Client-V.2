@@ -14,7 +14,7 @@ const Navbar = async () => {
         { href: "/about", label: "About" },
         { href: "/tour", label: "Explore Tours" },
         { href: "/#", label: "Contact" },
-        { href: "/#", label: "Blog" },
+        // { href: "/#", label: "Blog" },
     ];
 
     const userRole = await getUserRole();

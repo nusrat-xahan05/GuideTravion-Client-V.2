@@ -21,7 +21,7 @@ interface Props {
 
 export default function RecentlyAddedTours({ newTours, wishlistIds, user }: Props) {
     return (
-        <section className="max-w-8xl mx-auto my-20 px-4 md:px-8 lg:px-16">
+        <section id="recentlyAdded" className="max-w-8xl mx-auto my-20 px-4 md:px-8 lg:px-16">
             <SectionTitle title="Recently Added" subtitle="Explore the lastest trust worthy experiences" />
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}

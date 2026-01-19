@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function DealsOffer() {
     return (
-        <section className="max-w-8xl mx-auto mt-16 px-4 md:px-8 lg:px-16">
+        <section className="max-w-8xl mx-auto my-20 px-4 md:px-8 lg:px-16">
             <div className="py-20 bg-primary text-center rounded-[50px]">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}

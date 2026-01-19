@@ -34,10 +34,10 @@ export default function Footer() {
                     <div className="space-y-3">
                         <h3 className="text-base font-semibold text-primary">For Travelers</h3>
                         <ul className="space-y-2 font-medium text-[14.5px] text-[rgba(0,43,17,0.7)]">
-                            <li><Link href={'/tours'}>Explore Tours</Link></li>
-                            <li><Link href={'/blogs'}>Top Destinations</Link></li>
-                            <li><Link href={'/faq'}>Recently Added</Link></li>
-                            <li><Link href={'/faq'}>Reviews</Link></li>
+                            <li><Link href={'/tour'}>Explore Tours</Link></li>
+                            <li><Link href='#topDestination'>Top Destinations</Link></li>
+                            <li><Link href='#recentlyAdded'>Recently Added</Link></li>
+                            {/* <li><Link href={'/faq'}>Reviews</Link></li> */}
                         </ul>
                     </div>
 
@@ -46,8 +46,8 @@ export default function Footer() {
                         <h3 className="text-base font-semibold text-primary">Company</h3>
                         <ul className="space-y-2 font-medium text-[14.5px] text-[rgba(0,43,17,0.7)]">
                             <li><Link href={'/about'}>About Us</Link></li>
-                            <li><Link href={'/blogs'}>Why GuideTravion</Link></li>
-                            <li><Link href={'/faq'}>Privacy Policy</Link></li>
+                            <li><Link href='#whyGuideTravion'>Why GuideTravion</Link></li>
+                            <li><Link href='#'>Privacy Policy</Link></li>
                         </ul>
                     </div>
 
@@ -56,8 +56,8 @@ export default function Footer() {
                         <h3 className="text-base font-semibold text-primary">Services</h3>
                         <ul className="space-y-2 font-medium text-[14.5px] text-[rgba(0,43,17,0.7)]">
                             <li><Link href={'/register/guide'}>Become A Guide</Link></li>
-                            <li><Link href={'/contact'}>Contact us</Link></li>
-                            <li><Link href={'/faq'}>FAQ</Link></li>
+                            <li><Link href={'#'}>Contact us</Link></li>
+                            <li><Link href={'#'}>FAQ</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ import SectionTitle from "@/components/shared/Home/SectionTitle";
 
 export default function WhyChooseUs() {
     return (
-        <section className="max-w-8xl mx-auto my-20 px-4 md:px-8 lg:px-16">
+        <section id="whyGuideTravion" className="max-w-8xl mx-auto my-20 px-4 md:px-8 lg:px-16">
             <SectionTitle title="Why Choose GuideTravion" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
