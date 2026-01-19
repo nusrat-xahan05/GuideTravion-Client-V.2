@@ -21,7 +21,7 @@ interface TourDetailsViewProps {
 
 export default function TourDetailsView({ tour, user, reviews }: TourDetailsViewProps) {
     return (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-8xl mt-16 mx-auto px-4 py-10">
             {/* HERO IMAGE */}
             <div className="relative h-[420px] rounded-2xl overflow-hidden shadow">
                 <Image

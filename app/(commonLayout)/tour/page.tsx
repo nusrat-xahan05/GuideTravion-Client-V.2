@@ -28,7 +28,7 @@ const TourPage = async ({
 
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-8xl mx-auto mt-16 px-4 py-8">
             <div className="grid grid-cols-12 gap-6">
                 {/* LEFT SIDEBAR */}
                 <div className="col-span-12 md:col-span-3">
