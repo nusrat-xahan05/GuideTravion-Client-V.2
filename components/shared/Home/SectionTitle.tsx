@@ -15,9 +15,9 @@ export default function SectionTitle({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto space-y-3 mb-10"
+            className="text-center max-w-2xl mx-auto space-y-3 mb-12"
         >
-            <h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
+            <h2 className="text-primary text-3xl md:text-4xl font-bold">{title}</h2>
             {subtitle && (
                 <p className="text-gray-600 text-[15px] leading-6">{subtitle}</p>
             )}
