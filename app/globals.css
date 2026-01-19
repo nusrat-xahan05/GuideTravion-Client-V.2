@@ -7,6 +7,31 @@
 @custom-variant dark (&:is(.dark *));
 
 
+.font-paytone {
+  font-family: var(--font-paytone-one);
+}
+
+.font-body {
+  font-family: var(--font-inter);
+}
+
+/* Swiper arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #002B11;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background-color: #002B11;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #002B11;
+  opacity: 1;
+}
+
 @keyframes loading-bar {
     0% {
         transform: translateX(-100%);
@@ -14,14 +39,6 @@
     100% {
         transform: translateX(200%);
     }
-}
-
-.font-paytone {
-  font-family: var(--font-paytone-one);
-}
-
-.font-body {
-  font-family: var(--font-inter);
 }
 
 .animate-loading-bar {

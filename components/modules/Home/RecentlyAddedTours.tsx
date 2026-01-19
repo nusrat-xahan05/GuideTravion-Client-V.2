@@ -21,7 +21,7 @@ interface Props {
 
 export default function RecentlyAddedTours({ newTours, wishlistIds, user }: Props) {
     return (
-        <section className="max-w-8xl mx-auto py-16 px-4 md:px-8 lg:px-16">
+        <section className="max-w-8xl mx-auto my-20 px-4 md:px-8 lg:px-16">
             <SectionTitle title="Recently Added" subtitle="Explore the lastest trust worthy experiences" />
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -59,9 +59,11 @@ export default function RecentlyAddedTours({ newTours, wishlistIds, user }: Prop
                                     </div>
                                 </div>
                                 <div className="p-5 space-y-3 flex flex-col flex-1">
-                                    <h3 className="text-lg font-semibold">{tour.title}</h3>
+                                    <h3 className="text-lg font-semibold line-clamp-2 min-h-14">
+                                        {tour.title}
+                                    </h3>
                                     <p className="flex items-center gap-2 text-sm text-gray-500">
-                                        <MapPin className="w-4 h-4 text-blue-600" />
+                                        <MapPin className="w-4 h-4 text-primary" />
                                         {tour.location}, {tour.division}
                                     </p>
 

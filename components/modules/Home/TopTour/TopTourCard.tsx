@@ -39,8 +39,8 @@ export default function TopTourCard({ tour, index, wishlistIds, user }: TopTourC
                         />
 
                         {tour.averageRating && tour.averageRating > 0 && (
-                            <div className="absolute top-3 left-3 bg-white px-3 py-1 rounded-full flex items-center gap-1 text-sm font-medium shadow">
-                                <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                            <div className="absolute top-3 left-3 bg-secondary px-3 py-1 rounded-full flex items-center gap-1 text-sm font-medium shadow">
+                                <Star className="w-4 h-4 text-primary fill-primary" />
                                 {tour.averageRating.toFixed(1)}
                             </div>
                         )}
@@ -79,12 +79,12 @@ export default function TopTourCard({ tour, index, wishlistIds, user }: TopTourC
                         {/* BOTTOM ROW */}
                         <div className="flex flex-col gap-2.5 pb-6 mt-auto">
                             <p className="flex items-center gap-2 text-sm text-gray-600">
-                                <MapPin className="w-4 h-4 text-blue-600" />
+                                <MapPin className="w-4 h-4 text-primary" />
                                 {tour.location}, {tour.division}
                             </p>
 
                             <span className="flex items-center gap-1 text-sm">
-                                <Clock className="w-4 h-4 text-blue-600" />
+                                <Clock className="w-4 h-4 text-primary" />
                                 {tour.durationDays} Days
                             </span>
                         </div>

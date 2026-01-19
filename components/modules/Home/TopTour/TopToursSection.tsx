@@ -13,7 +13,7 @@ interface Props {
 
 export default function TopToursSection({ topTours, wishlistIds, user }: Props) {
     return (
-        <section className="px-4 mt-20 mb-16 md:px-8 lg:px-16 pb-10">
+        <section className="px-4 md:px-8 lg:px-16">
             <SectionTitle
                 title="Top Destinations"
                 subtitle="Explore the most popular and best-rated tours curated for you"
