@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Globe, ShieldCheck, Star } from "lucide-react";
 import aboutImg from "@/assets/images/bandar.jpg"
+import DealsOffer from "./DealsOffer";
 
 export default function About() {
     return (
@@ -149,14 +150,7 @@ export default function About() {
             </section>
 
             {/* FOOTER CTA */}
-            <section className="bg-indigo-700 text-white py-16">
-                <div className="max-w-4xl mx-auto text-center px-6 space-y-4">
-                    <h2 className="text-3xl font-bold">Start Your Journey Today</h2>
-                    <p className="opacity-90">
-                        Join GuideTravion and explore destinations with trusted local guides.
-                    </p>
-                </div>
-            </section>
+            <DealsOffer></DealsOffer>
 
         </div>
     );

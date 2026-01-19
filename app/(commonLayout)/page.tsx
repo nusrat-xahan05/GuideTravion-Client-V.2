@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import CTASection from '@/components/modules/Home/CTASection';
 import DivisionSection from '@/components/modules/Home/DivisionSection';
 import RecentlyAddedTours from '@/components/modules/Home/RecentlyAddedTours';
 import Hero from '@/components/modules/Home/Hero';
@@ -30,7 +29,6 @@ const HomePage = async () => {
             <Hero></Hero>
             <WhyChooseUs></WhyChooseUs>
             <TopToursSection topTours={topTours} wishlistIds={wishlistIds} user={user} />
-            <CTASection></CTASection>
             <RecentlyAddedTours newTours={newTours.data} wishlistIds={wishlistIds} user={user}></RecentlyAddedTours>
             <DivisionSection divisionCounts={divisionCounts} />
             <DealsOffer></DealsOffer>

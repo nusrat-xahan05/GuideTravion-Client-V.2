@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${inter.variable} ${paytoneOne.variable} antialiased`}
       >
         <NextTopLoader
-          color="#2563eb"
+          color="#002B11"
           height={3}
           showSpinner={false}
         />
