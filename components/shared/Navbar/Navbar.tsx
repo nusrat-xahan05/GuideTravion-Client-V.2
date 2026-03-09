@@ -13,7 +13,7 @@ const Navbar = async () => {
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
         { href: "/tour", label: "Explore Tours" },
-        { href: "/#", label: "Contact" },
+        { href: "/contact", label: "Contact" },
         // { href: "/#", label: "Blog" },
     ];
 
