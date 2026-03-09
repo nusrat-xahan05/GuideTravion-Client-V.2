@@ -39,13 +39,13 @@ export default function RecentlyAddedTours({ newTours, wishlistIds, user }: Prop
                 {newTours.map((tour: ITour) => (
                     <SwiperSlide className="mb-10" key={tour._id}>
                         <Link href={`/tour/${tour.slug}`} className="h-full block">
-                            <div className="h-full rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
-                                <div className="relative h-56 w-full">
+                            <div className="group h-full rounded-2xl overflow-hidden bg-white border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                                <div className="relative h-56 w-full overflow-hidden">
                                     <Image
                                         src={tour.images?.[0] || noImg}
                                         alt={tour.title}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
 
                                     <div className="absolute top-3 right-3 z-10">
